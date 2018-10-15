@@ -1,0 +1,24 @@
+
+plugins {
+    // Apply the java plugin to add support for Java
+    id 'java'
+    id 'idea'
+    //id "com.marklogic.ml-gradle" version "3.9.0"
+    id 'com.marklogic.ml-data-hub' version '4.0.1'
+}
+
+dependencies {
+    compile "com.marklogic:marklogic-client-api:4.1.1"
+
+    // Use JUnit test framework
+    testCompile 'junit:junit:4.12'
+
+    runtime "ch.qos.logback:logback-classic:1.1.8"
+    runtime "org.slf4j:jcl-over-slf4j:1.7.22"
+    runtime "org.slf4j:slf4j-api:1.7.22"
+}
+
+// In this section you declare where to find the dependencies of your project
+repositories {
+    jcenter()
+}

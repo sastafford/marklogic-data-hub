@@ -1,0 +1,16 @@
+{
+  "sample" : {
+    "x" : 10,
+    "y" : 115,
+    "width" : 350,
+    "height" : 100,
+    "vertices" : { }
+  },
+  "sampleXml" : {
+    "x" : 30,
+    "y" : 145,
+    "width" : 350,
+    "height" : 100,
+    "vertices" : { }
+  }
+}

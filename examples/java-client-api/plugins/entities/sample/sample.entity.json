@@ -1,0 +1,16 @@
+{
+  "info" : {
+    "title" : "sample",
+    "version" : "0.0.1"
+  },
+  "definitions" : {
+    "sample" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : { }
+    }
+  }
+}

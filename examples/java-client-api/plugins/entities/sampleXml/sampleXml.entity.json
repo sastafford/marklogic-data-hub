@@ -1,0 +1,16 @@
+{
+  "info" : {
+    "title" : "sampleXml",
+    "version" : "0.0.1"
+  },
+  "definitions" : {
+    "sampleXml" : {
+      "required" : [ ],
+      "pii" : [ ],
+      "elementRangeIndex" : [ ],
+      "rangeIndex" : [ ],
+      "wordLexicon" : [ ],
+      "properties" : { }
+    }
+  }
+}
