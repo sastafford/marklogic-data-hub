@@ -19,12 +19,10 @@ import java.io.IOException;
 public class FlowRunner {
     private Logger logger = LoggerFactory.getLogger(FlowRunner.class);
     private DatabaseClient databaseClient;
-    private ServerTransform runFlow;
 
     public FlowRunner() {
         databaseClient = DatabaseClientFactory.newClient("localhost", 8010,
             new DatabaseClientFactory.DigestAuthContext("admin", "admin"));
-        runFlow = new ServerTransform("ml:inputFlow");
     }
 
     public void runFlowWithDocumentManager(String entityName, String flowName, String jobId) {
@@ -39,6 +37,7 @@ public class FlowRunner {
 
     public void runFlowWithDataMovement(String entityName, String flowName, String jobId) throws IOException {
         String collection = ".testSimple";
+        ServerTransform runFlow = new ServerTransform("ml:sjsInputFlow");
         runFlow.addParameter("entity-name", entityName);
         runFlow.addParameter("flow-name", flowName);
         runFlow.addParameter("job-id", jobId);
@@ -65,7 +64,7 @@ public class FlowRunner {
 
         DocumentMetadataHandle meta = new DocumentMetadataHandle();
         ihb1.add("/doc/jackson.json", meta, new JacksonHandle(new ObjectMapper().readTree("{\"test\":true}")));
-        ihb1.add("/doc/string.txt", meta, new StringHandle("test"));
+        //ihb1.add("/doc/string.txt", meta, new StringHandle("test"));
         ihb1.flushAndWait();
         ihb1.awaitCompletion();
     }
